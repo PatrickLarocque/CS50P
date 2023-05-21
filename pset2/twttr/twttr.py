@@ -5,8 +5,8 @@ vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 user_input = input("Input:" ).strip()
 
 # Loop through user's string, removing vowels when encoutered.
-for i in user_input:
-    if i in vowels:
-        user_input = user_input.replace(i, "")
+for char in user_input:
+    if char in vowels:
+        user_input = user_input.replace(char, "")
 
 print(user_input)

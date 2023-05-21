@@ -23,9 +23,9 @@ def is_valid(plate):
         return False
     
     # Whenever a character is numeric and not 0, all subsequent characters must be numeric.
-    for i in plate:
-        if i.isnumeric():
-            if plate[plate.index(i):len(plate)].isnumeric() and int(i) != 0:
+    for char in plate:
+        if char.isnumeric():
+            if plate[plate.index(char):len(plate)].isnumeric() and int(char) != 0:
                 return True
             else:
                 return False
