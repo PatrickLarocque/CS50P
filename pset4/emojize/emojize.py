@@ -2,7 +2,7 @@
 the “emojized” version of that str, converting any codes (or aliases) therein to their 
 corresponding emoji. '''
 
-import emoji
+from emoji import emojize
 
 user_input = input("Input: ").strip()
-print(emoji.emojize(f"Output: {user_input}"))
+print(emojize(f"Output: {user_input}"))

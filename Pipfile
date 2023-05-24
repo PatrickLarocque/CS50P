@@ -1,4 +1,4 @@
-[[source]]
+ [[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
@@ -7,6 +7,9 @@ name = "pypi"
 check50 = "*"
 submit50 = "*"
 style50 = "*"
+emoji = "*"
+pyfiglet = "*"
+inflect = "*"
 
 [dev-packages]
 
