@@ -2,7 +2,7 @@
 text but with all vowels (A, E, I, O, and U) omitted, whether inputted in uppercase or lowercase. '''
 
 vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-user_input = input("Input:" ).strip()
+user_input = input("Input: ").strip()
 
 # Loop through user's string, removing vowels when encoutered.
 for char in user_input:
