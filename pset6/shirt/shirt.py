@@ -1,5 +1,7 @@
+# After finishing CS50 itself, students on campus at Harvard traditionally receive their very own I took CS50 t-shirt. No need to buy one online, but like to try one on virtually?
+
 from sys import argv, exit
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 
 def main():
@@ -21,13 +23,14 @@ def is_valid_command_line_arguments(argv):
         first_arg_extension = first_arg[1]
         if not argv[2].endswith(first_arg_extension):
             exit("Input and output have different file extensions.")
-            
+ 
+# Resize the original muppets image to fit the size of the CS50P shirt. Then overlay the shirt overtop the rized origial and save the resulting image.           
 def overlay_images(before):
     original = Image.open(before)
     shirt = Image.open("shirt.png")
-    resized_shirt = shirt.resize(original.size)
-    original.paste(resized_shirt, resized_shirt)
-    original.save(argv[2])
+    resized_original = ImageOps.fit(original, shirt.size)
+    resized_original.paste(shirt, shirt)
+    resized_original.save(argv[2])
     
     
 if __name__ == "__main__":
